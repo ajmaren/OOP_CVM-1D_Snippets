@@ -184,27 +184,7 @@ print ()
 
 #-------------------
 
-# Possible alternate code: 
-
-# This updates the wRight values given that certain nodes now have an activation of "1"
-x = 0
-for i in range(totalRows): 
-    for j in range(totalColumns):
-        q = totalColumns*i    # q denotes first node of the i-th row
-        if j==0:
-            # test to see if at the beginning of row; if so, assign wRight from last element on row
-            if NodeList[q-1].activ==0:
-                NodeList[x].wLeft=0
-            else:
-                NodeList[x].wLeft=1
-        else:
-            if NodeList[x-1].activ==0:
-                NodeList[x].wLeft=0
-            else:
-                NodeList[x].wLeft=1  
-        x = x+1
-        
-#--------------------------        
+      
 
 
 # This updates the wRight values given that certain nodes now have an activation of "1"
