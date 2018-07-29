@@ -170,7 +170,7 @@ if not debugPrintOff:
         print (" Row ", i)
         for j in range(totalColumns):
             q = totalColumns*i    # q denotes first node of the i-th row
-            # test to see if at the end of row; if so, assign wLeft from first element on row
+            # test to see if at the beginning of row; if so, assign wLeft from last element on row
             if j==0:  # At the last node in the row
                 wrapLeftAtCol0 = q+totalColumns-1
                 print (" ", x, "      ", i, "       ", j, "          ", q, "         ", NodeList[x].activ, "        ", NodeList[wrapLeftAtCol0].activ, "          ", NodeList[x].wLeft)
